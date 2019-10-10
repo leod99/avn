@@ -1,0 +1,12 @@
+{"namespace": "com.aiven.monitor",
+ "type": "record",
+ "name": "metrics",
+ "fields": [
+     {"name": "host", "type": "string"},
+     {"name": "cpu",  "type": "float"},
+     {"name": "memory",  "type": "float"},
+     {"name": "disk",  "type": "float"},
+     {"name": "timestamp",  "type": "string"},
+     {"name": "desc",  "type": "string"}
+ ]
+}

@@ -35,11 +35,9 @@ $git clone https://github.com/leod99/avn
 then
 $chmod +x *.sh
 
-
 Download ca.pem  service.cert  service.key for kafka server on Aiven web UI to folder secrets/
 
-change user/password/user.info/url accordingly in file(can be found on Aiven web UI)
-json/sink_config.json
+change user/password/user.info/url accordingly in file json/sink_config.json(can be found on Aiven web UI)
 
 set KAFKA_SERVER, SCHEMA_REGISTRY_URL, USER in fabrun.py
 set SCHEMA_REGISTRY_URL, KAFKA_CONNECT_URL in register_schema.py

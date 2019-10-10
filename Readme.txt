@@ -1,5 +1,5 @@
 
-0. Please skip this, ssh pem/pub file for remote hosts login are generated in hostsecrets/
+0. Please skip this, ssh pem/pub file are generated in hostsecrets/
 https://askubuntu.com/questions/644020/how-to-generate-openssl-pem-file-and-where-we-have-to-place-it
 
 $ssh-keygen -t rsa -b 2048 -v
@@ -47,6 +47,8 @@ set SCHEMA_REGISTRY_URL, KAFKA_CONNECT_URL in register_schema.py
 
 5. Set up remote & local env
 add hostnames to be monitored in hostnames.txt
+replace username "avnadmin" in aptsetup.sh/yumsetup.sh with existing user on remote hosts
+
 for Debian / Ubuntu local host
 run $./aptsetup.sh
 
@@ -66,7 +68,12 @@ verify Kafka schema and connector on web UI
 restart Kafka service and retry if any error occurs)
 
 
-7. Metric message is generated every 5mins, verify on Postgres server
+7. Metric message generation runs every 5mins, or can be invoked manually by
+$./runjob.sh
+or
+$python fabrun.py
+
+verify on Postgres server,
 $sudo apt install postgresql postgresql-contrib
 $sudo -i -u postgres
 
@@ -83,6 +90,5 @@ $psql -h pg-1cabf9bc-chrdeng9-e577.aivencloud.com -p 16118 -U avnadmin -d defaul
 
 
 8. TODO.
-add more metrics,
-adjust code comment/format, centralize config file for env variables, 
-automate more, etc.
+add more metrics/automation,
+adjust code comment/format, centralize config file for env variables, etc.

@@ -59,8 +59,7 @@ Set up Kafka schema and connector
 run 
 $python register_schema.py
 
-
-6. verify crontab is set up with
+Verify crontab is set up with
 $sudo crontab -e
 
 verify Kafka schema and connector on web UI
@@ -68,7 +67,7 @@ verify Kafka schema and connector on web UI
 restart Kafka service and retry if any error occurs)
 
 
-7. Metric message generation runs every 5mins, or can be invoked manually by
+6. Metric message generation runs every 5mins, or can be invoked manually by
 $./runjob.sh
 or
 $python fabrun.py
@@ -89,6 +88,6 @@ $psql -h pg-1cabf9bc-chrdeng9-e577.aivencloud.com -p 16118 -U avnadmin -d defaul
    16 |    0.9 | ec2-52-63-51-102.ap-southeast-2.compute.amazonaws.com | 3.1 | 2019-10-10 00:23:20 | 
 
 
-8. TODO.
+7. TODO.
 add more metrics/automation/testing file/logging,
 adjust code comment/format, centralize config file for env variables, etc.

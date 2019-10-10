@@ -7,7 +7,7 @@ from fabric2 import Connection
 
 
 KAFKA_SERVER = 'kafka-282e881e-chrdeng9-e577.aivencloud.com:16120'
-SCHEMA_REGISTRY_URL = 'https://avnadmin:lx51l9ejwkpfyi2s@kafka-282e881e-chrdeng9-e577.aivencloud.com:16123'
+SCHEMA_REGISTRY_URL = 'https://avnadmin:passwordi2s@kafka-282e881e-chrdeng9-e577.aivencloud.com:16123'
 # Kafka server cert/key file relative path
 CAFILE = '/secrets/ca.pem'
 CERTFILE = '/secrets/service.cert'

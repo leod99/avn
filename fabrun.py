@@ -107,6 +107,8 @@ def remote_info(c, hostname):
                 'timestamp': dt_string,
                 'desc': ''
               }
+    else:
+        print("Error: %s\n%s\n%s" % (cpu.stderr, mem.stderr, hdd.stderr))
     return res
 
 

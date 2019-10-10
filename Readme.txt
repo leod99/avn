@@ -84,4 +84,5 @@ $psql -h pg-1cabf9bc-chrdeng9-e577.aivencloud.com -p 16118 -U avnadmin -d defaul
 
 8. TODO.
 add more metrics,
-adjust code comment/format, centralize config file for env variables, etc.
+adjust code comment/format, centralize config file for env variables, 
+automate more, etc.

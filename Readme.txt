@@ -36,7 +36,7 @@ then
 $chmod +x *.sh
 
 
-4. Download ca.pem  service.cert  service.key for kafka server on Aiven web UI to folder secrets/
+Download ca.pem  service.cert  service.key for kafka server on Aiven web UI to folder secrets/
 
 change user/password/user.info/url accordingly in file(can be found on Aiven web UI)
 json/sink_config.json
@@ -45,7 +45,7 @@ set KAFKA_SERVER, SCHEMA_REGISTRY_URL, USER in fabrun.py
 set SCHEMA_REGISTRY_URL, KAFKA_CONNECT_URL in register_schema.py
 
 
-5. Set up remote & local env
+4. Set up remote & local env
 add hostnames to be monitored in hostnames.txt
 replace username "avnadmin" in aptsetup.sh/yumsetup.sh with existing user on remote hosts
 
@@ -67,7 +67,7 @@ verify Kafka schema and connector on web UI
 restart Kafka service and retry if any error occurs)
 
 
-6. Metric message generation runs every 5mins, or can be invoked manually by
+5. Metric message generation runs every 5mins, or can be invoked manually by
 $./runjob.sh
 or
 $python fabrun.py
@@ -88,6 +88,6 @@ $psql -h pg-1cabf9bc-chrdeng9-e577.aivencloud.com -p 16118 -U avnadmin -d defaul
    16 |    0.9 | ec2-52-63-51-102.ap-southeast-2.compute.amazonaws.com | 3.1 | 2019-10-10 00:23:20 | 
 
 
-7. TODO.
+6. TODO.
 add more metrics/automation/testing file/logging,
 adjust code comment/format, centralize config file for env variables, etc.

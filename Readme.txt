@@ -46,6 +46,7 @@ set SCHEMA_REGISTRY_URL, KAFKA_CONNECT_URL in register_schema.py
 4. Set up remote & local env
 add hostnames to be monitored in hostnames.txt
 replace username "avnadmin" in aptsetup.sh/yumsetup.sh with existing user on remote hosts
+replace username for scp in runjob.sh with user on local host
 
 for Debian / Ubuntu local host
 run $./aptsetup.sh

@@ -55,7 +55,7 @@ class Producer():
     def __init__(self):
         os.chdir(os.path.dirname(__file__))
         pwd = os.getcwd()
-        print("pwd:%s" % pwd)
+
         self._producer = AvroProducer({
             'bootstrap.servers': KAFKA_SERVER,
             'schema.registry.url': SCHEMA_REGISTRY_URL,
@@ -63,7 +63,7 @@ class Producer():
             'ssl.ca.location': pwd + CAFILE,
             'ssl.certificate.location': pwd + CERTFILE,
             'ssl.key.location': pwd + KEYFILE
-            #'ssl.key.password': '<cert_pass>'
+
             }, default_key_schema=key_schema, default_value_schema=value_schema)
 
     def produce(self, topic, value):
